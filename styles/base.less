@@ -5,7 +5,7 @@ atom-text-editor {
   color: @syntax-text-color;
 
   .wrap-guide {
-    background-color: @syntax-wrap-guide-color;
+    background-color: darken(@syntax-wrap-guide-color, 10%);
   }
 
   .indent-guide {
@@ -48,6 +48,8 @@ atom-text-editor {
 
   .selection .region {
     background-color: @syntax-selection-color;
+    border-radius: 4px;
+    border: 1px solid RGBA(128, 203, 196, 1.00);
   }
 }
 
@@ -55,35 +57,43 @@ atom-text-editor {
 // Syntax styles
 
 .syntax--comment {
-  color: @light-gray;
+  color: @dark;
 }
-
+// keyword
 .syntax--keyword {
-  color: @purple;
+  color: @light-pink;
 
   &.syntax--control {
-    color: @purple;
+    color: @bright-pink;
+    font-style: italic;
   }
 
   &.syntax--operator {
-    color: @syntax-text-color;
+    color: @light-pink;
   }
 
   &.syntax--other.syntax--special-method {
     color: @blue;
   }
 
-  &.syntax--other.syntax--unit {
+  &.syntax--other.syntax--unit,
+  &.syntax--other,
+  &.syntax--escape {
     color: @orange;
   }
 }
-
+// storage
 .syntax--storage {
-  color: @purple;
+  &.syntax--type {
+    color: @dark-red;
+  }
+  &.syntax--modifier {
+    color: @purple;
+  }
 }
-
+// constant
 .syntax--constant {
-  color: @orange;
+  color: @pink-orange;
 
   &.syntax--character.syntax--escape {
     color: @cyan;
@@ -100,17 +110,21 @@ atom-text-editor {
   &.syntax--other.syntax--symbol {
     color: @green;
   }
+  &.syntax--other.syntax--php {
+    color: @syntax-color-php-constant;
+  }
 }
-
+// variables
 .syntax--variable {
-  color: @red;
+  color: @variable;
+  font-weight: 600;
 
   &.syntax--interpolation {
-    color: darken(@red, 10%);
+    color: darken(@variable, 10%);
   }
 
   &.syntax--parameter.syntax--function {
-    color: @syntax-text-color;
+    color: darken(@variable, 10%);
   }
 }
 
@@ -119,12 +133,15 @@ atom-text-editor {
   color: @syntax-background-color;
 }
 
+// string
 .syntax--string {
   color: @green;
 
-
+  &.syntax--quoted.syntax--docstring{
+    color: @dark;
+  }
   &.syntax--regexp {
-    color: @cyan;
+    color: @dark-red-orange;
 
     .syntax--source.syntax--ruby.syntax--embedded {
       color: @orange;
@@ -135,18 +152,29 @@ atom-text-editor {
     color: @red;
   }
 }
-
+// punctuation
 .syntax--punctuation {
+  color: @green;
   &.syntax--definition {
     &.syntax--comment {
-      color: @light-gray;
+      color: @dark;
+    }
+
+    &.syntax--tag {
+      color: @light-pink-2;
     }
 
     &.syntax--string,
     &.syntax--variable,
     &.syntax--parameters,
     &.syntax--array {
-      color: @syntax-text-color;
+      color: darken(@green, 5%);
+    }
+
+    &.syntax--variable,
+    &.syntax--array,
+    &.syntax--variable.syntax--php {
+      color: @php-dollar;
     }
 
     &.syntax--heading,
@@ -166,39 +194,69 @@ atom-text-editor {
   }
 
   &.syntax--section.syntax--embedded {
-    color: darken(@red, 10%);
+    color: darken(@green, 10%);
+  }
+
+  &.syntax--separator.syntax--inheritance.syntax--php {
+    color: @light-pink;
   }
 
 }
 
+// supports/Class
 .syntax--support {
   &.syntax--class {
-    color: @light-orange;
+    color: @dark-orange;
+    font-weight: 600;
+  }
+
+  &.syntax--other {
+    font-weight: 600;
+    color: @light-dark-yellow;
+    &.syntax--use.syntax--php,
+    &.syntax--php {
+      color: @light-dark-yellow;
+    }
   }
 
   &.syntax--function  {
-    color: @cyan;
+    color: @blue;
 
     &.syntax--any-method {
       color: @blue;
     }
   }
+
+  &.syntax--entity {
+    color: @light-pink;
+  }
+  &.syntax--type.syntax--property-name.syntax--css {
+    color: #96ceb4;
+  }
 }
 
+// entity
 .syntax--entity {
   &.syntax--name.syntax--function {
-    color: @blue;
+    color: @cyan;
+    font-weight: 600;
   }
   &.syntax--name.syntax--type {
     color: @light-orange;
-    text-decoration: underline;
+    // text-decoration: underline;
+  }
+  &.syntax--name.syntax--tag {
+    color: @dark-pink;
+    font-weight: 600;
   }
 
   &.syntax--other.syntax--inherited-class {
     color: @green;
+    font-weight: 600;
   }
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
     color: @light-orange;
+    font-weight: 600;
   }
 
   &.syntax--name.syntax--section {
@@ -206,12 +264,12 @@ atom-text-editor {
   }
 
   &.syntax--name.syntax--tag {
-    color: @red;
-    text-decoration: underline;
+    color: @red-orange;
+    font-weight: 600;
   }
 
   &.syntax--other.syntax--attribute-name {
-    color: @orange;
+    color: @light-dark-yellow;
 
     &.syntax--id {
       color: @blue;
@@ -219,9 +277,16 @@ atom-text-editor {
   }
 }
 
+// meta
 .syntax--meta {
   &.syntax--class {
     color: @light-orange;
+    font-weight: 600;
+  }
+
+  &.syntax--tag.syntax--doctype.syntax--html {
+    color: @dark-pink;
+    font-weight: 600;
   }
 
   &.syntax--link {
@@ -240,12 +305,16 @@ atom-text-editor {
     background-color: @gray;
     color: @syntax-text-color;
   }
+  &.syntax--function-call {
+    color: @blue;
+  }
 }
 
 .syntax--none {
   color: @syntax-text-color;
 }
 
+// markup
 .syntax--markup {
   &.syntax--bold {
     color: @orange;
@@ -293,6 +362,22 @@ atom-text-editor {
   }
 }
 
+.syntax--source.syntax--python {
+  .syntax--entity {
+    &.syntax--name {
+      &.syntax--function {
+        color: @cyan;
+        &.syntax--decorator {
+          color: lighten(@blue-wale-secondary, 5%);
+        }
+      }
+    }
+  }
+
+  .syntax--string.syntax--quoted {
+    color: @dark;
+  }
+}
 
 // Mini editor
 
