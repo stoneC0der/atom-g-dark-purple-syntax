@@ -13,6 +13,6 @@ Optimize for **PHP**, **Blade Template**, **HTML**, **CSS**, **Less**, **JS (Van
 #### [Atom G light](https://atom.io/packages/g-light-theme-syntax)
 #### [Atom G Dark](https://atom.io/packages/g-dark-theme-syntax)
 ---
-![A screenshot of your theme](https://github.com/stoneC0der/atom-g-dark-purple-syntaxt/blob/master/assets/Screenshot%202020-03-31%20at%202.48.42%20PM.png)
+![A screenshot of your theme](https://github.com/stoneC0der/atom-g-dark-purple-syntaxt/raw/master/assets/Screenshot%202020-03-31%20at%202.48.42%20PM.png)
 
 #### Support for other languages coming
