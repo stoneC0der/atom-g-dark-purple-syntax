@@ -1,5 +1,18 @@
 # g-dark-purple-syntax theme
+---
+Atom version of [G Dark Theme (Purple)](https://marketplace.visualstudio.com/items?itemName=StoneC0der.g-dark-theme) for vscode.
 
-A short description of your theme.
+Optimize for **PHP**, **Blade Template**, **HTML**, **CSS**, **Less**, **JS (Vanilla)**, **JSON** and **Markdown**.
 
-![A screenshot of your theme](https://f.cloud.github.com/assets/69169/2289498/4c3cb0ec-a009-11e3-8dbd-077ee11741e5.gif)
+## This syntax is meant to be used with
+
+### [Atom G Dark-Purple UI](https://atom.io/packages/g-dark-purple-ui)
+
+### Also check out
+
+#### [Atom G light](https://atom.io/packages/g-light-theme-syntax)
+#### [Atom G Dark](https://atom.io/packages/g-dark-theme-syntax)
+---
+![A screenshot of your theme](https://raw.githubusercontent.com/stoneC0der/atom-g-dark-purple-syntaxt/master/assets/Screenshot%202020-03-31%20at%202.48.42%20PM.png?token=ACWW2BB7QIZA5FE4AZAWWVK6QNMWY)
+
+#### Support for other languages coming
