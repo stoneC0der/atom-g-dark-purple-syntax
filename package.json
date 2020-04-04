@@ -1,7 +1,7 @@
 {
   "name": "g-dark-purple-syntax",
   "theme": "syntax",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Purple version of [Atom G Dark Syntax/UI](https://atom.io/packages/g-dark-theme-syntax)",
   "keywords": [
     "syntax",
