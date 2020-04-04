@@ -1,5 +1,7 @@
 @import "syntax-variables";
-
+atom-text-editor * {
+  font-weight: 600;
+}
 atom-text-editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
@@ -57,19 +59,19 @@ atom-text-editor {
 // Syntax styles
 
 .syntax--comment {
-  color: @dark;
+  color: lighten(@dark, 6%);
 }
 // keyword
 .syntax--keyword {
   color: @light-pink;
 
   &.syntax--control {
-    color: @bright-pink;
+    color: lighten(@bright-pink, 15%);
     font-style: italic;
   }
 
   &.syntax--operator {
-    color: @light-pink;
+    color: lighten(@bright-pink, 15%);
   }
 
   &.syntax--other.syntax--special-method {
@@ -79,16 +81,16 @@ atom-text-editor {
   &.syntax--other.syntax--unit,
   &.syntax--other,
   &.syntax--escape {
-    color: @orange;
+    color: lighten(@orange, 5%);
   }
 }
 // storage
 .syntax--storage {
   &.syntax--type {
-    color: @dark-red;
+    color: lighten(@dark-red, 5%);
   }
   &.syntax--modifier {
-    color: @purple;
+    color: lighten(@purple, 5%);
   }
 }
 // constant
@@ -161,7 +163,7 @@ atom-text-editor {
     }
 
     &.syntax--tag {
-      color: @light-pink-2;
+      color: lighten(@light-pink-2, 2%);
     }
 
     &.syntax--string,
@@ -174,7 +176,7 @@ atom-text-editor {
     &.syntax--variable,
     &.syntax--array,
     &.syntax--variable.syntax--php {
-      color: @php-dollar;
+      color: lighten(@php-dollar, 1%);
     }
 
     &.syntax--heading,
@@ -246,7 +248,7 @@ atom-text-editor {
     // text-decoration: underline;
   }
   &.syntax--name.syntax--tag {
-    color: @dark-pink;
+    color: lighten(@dark-pink, 5%);
     font-weight: 600;
   }
 
@@ -264,7 +266,7 @@ atom-text-editor {
   }
 
   &.syntax--name.syntax--tag {
-    color: @red-orange;
+    color: lighten(@dark-pink, 5%);
     font-weight: 600;
   }
 
@@ -285,7 +287,7 @@ atom-text-editor {
   }
 
   &.syntax--tag.syntax--doctype.syntax--html {
-    color: @dark-pink;
+    color: lighten(@dark-pink, 5%);
     font-weight: 600;
   }
 
