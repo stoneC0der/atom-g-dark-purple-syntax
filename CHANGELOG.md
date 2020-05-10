@@ -1,3 +1,8 @@
+## 0.2.1
+
+* Improved editor background
+* Improved grey colors
+
 ## 0.2.0
 * Improve background
 * added opacity to some color to decrease eyestrain
