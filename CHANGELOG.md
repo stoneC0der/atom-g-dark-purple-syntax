@@ -1,4 +1,8 @@
-## 0.2.1
+## 0.3.1
+
+* Fixed version number
+
+## 0.3.0
 
 * Improved editor background
 * Improved grey colors
