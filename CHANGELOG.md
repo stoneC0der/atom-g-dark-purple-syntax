@@ -2,6 +2,7 @@
 
 * Improved editor background
 * Improved grey colors
+* Line number are less obstructive
 
 ## 0.2.0
 * Improve background
